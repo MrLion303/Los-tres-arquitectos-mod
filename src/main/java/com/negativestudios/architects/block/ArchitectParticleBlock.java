@@ -2,6 +2,7 @@ package com.negativestudios.architects.block;
 
 import com.negativestudios.architects.blockentity.ArchitectParticleBlockEntity;
 import com.negativestudios.architects.registry.ModBlockEntities;
+import java.util.function.Supplier;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.world.level.BlockGetter;
@@ -18,15 +19,15 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class ArchitectParticleBlock extends BaseEntityBlock {
-    private final SimpleParticleType particleType;
+    private final Supplier<SimpleParticleType> particleType;
 
-    public ArchitectParticleBlock(SimpleParticleType particleType, BlockBehaviour.Properties properties) {
+    public ArchitectParticleBlock(Supplier<SimpleParticleType> particleType, BlockBehaviour.Properties properties) {
         super(properties);
         this.particleType = particleType;
     }
 
     public SimpleParticleType getParticleType() {
-        return particleType;
+        return particleType.get();
     }
 
     @Override
