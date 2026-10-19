@@ -31,7 +31,7 @@ public class ArchitectParticleBlockEntity extends BlockEntity {
             double dx = (random.nextDouble() - 0.5D) * 0.012D;
             double dy = 0.008D + random.nextDouble() * 0.018D;
             double dz = (random.nextDouble() - 0.5D) * 0.012D;
-            level.addParticle(block.getParticleType(), x, y, z, dx, dy, dz);
+            level.addParticle(block.getParticleType(), true, x, y, z, dx, dy, dz);
         }
     }
 }
