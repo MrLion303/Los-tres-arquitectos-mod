@@ -14,13 +14,13 @@ public final class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, ArchitectsMod.MOD_ID);
 
     public static final RegistryObject<Block> MOONLIGHT_BLOCK = BLOCKS.register("moonlight_block",
-            () -> new ArchitectParticleBlock(ModParticles.MOONLIGHT.get(),
+            () -> new ArchitectParticleBlock(ModParticles.MOONLIGHT,
                     BlockBehaviour.Properties.of().strength(0.3F).sound(SoundType.AMETHYST).noOcclusion()));
     public static final RegistryObject<Block> STRLIGHT_BLOCK = BLOCKS.register("strlight_block",
-            () -> new ArchitectParticleBlock(ModParticles.STRLIGHT.get(),
+            () -> new ArchitectParticleBlock(ModParticles.STRLIGHT,
                     BlockBehaviour.Properties.of().strength(0.3F).sound(SoundType.AMETHYST).noOcclusion()));
     public static final RegistryObject<Block> RED_ARCHITECT_BLOCK = BLOCKS.register("red_architect_block",
-            () -> new ArchitectParticleBlock(ModParticles.RED_ARCHITECT.get(),
+            () -> new ArchitectParticleBlock(ModParticles.RED_ARCHITECT,
                     BlockBehaviour.Properties.of().strength(0.3F).sound(SoundType.AMETHYST).noOcclusion()));
 
     private ModBlocks() {}
