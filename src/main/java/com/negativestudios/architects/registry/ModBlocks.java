@@ -15,13 +15,13 @@ public final class ModBlocks {
 
     public static final RegistryObject<Block> MOONLIGHT_BLOCK = BLOCKS.register("moonlight_block",
             () -> new ArchitectParticleBlock(ModParticles.MOONLIGHT,
-                    BlockBehaviour.Properties.of().strength(0.3F).sound(SoundType.AMETHYST).noOcclusion().lightLevel(state -> 15)));
+                    BlockBehaviour.Properties.of().strength(0.3F).sound(SoundType.AMETHYST).noOcclusion().lightLevel(state -> 15).lightLevel(state -> 15)));
     public static final RegistryObject<Block> STRLIGHT_BLOCK = BLOCKS.register("strlight_block",
             () -> new ArchitectParticleBlock(ModParticles.STRLIGHT,
-                    BlockBehaviour.Properties.of().strength(0.3F).sound(SoundType.AMETHYST).noOcclusion()));
+                    BlockBehaviour.Properties.of().strength(0.3F).sound(SoundType.AMETHYST).noOcclusion().lightLevel(state -> 15)));
     public static final RegistryObject<Block> RED_ARCHITECT_BLOCK = BLOCKS.register("red_architect_block",
             () -> new ArchitectParticleBlock(ModParticles.RED_ARCHITECT,
-                    BlockBehaviour.Properties.of().strength(0.3F).sound(SoundType.AMETHYST).noOcclusion()));
+                    BlockBehaviour.Properties.of().strength(0.3F).sound(SoundType.AMETHYST).noOcclusion().lightLevel(state -> 15)));
 
     private ModBlocks() {}
 }
